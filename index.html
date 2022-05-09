@@ -1,41 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Docsify Share</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta name="description" content="A simple sharing button for Docsify. Within this plugin, we hope you can have your own sharing social media button easily e.g facebook, twitter and many more.">
-  <link rel="icon" href="assets/img/favicon.ico">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Docsify Share</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="A simple sharing button for Docsify. Within this plugin, we hope you can have your own sharing social media button easily e.g facebook, twitter and many more."
+    />
+    <link rel="icon" href="assets/img/favicon.ico" />
 
-  <!-- docsify-themeable styles-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css" title="light">
-  <link rel="stylesheet alternative" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css" title="dark">
-  <link rel="stylesheet" href="./assets/css/main-custom.css">
-  <link rel="stylesheet" href="./assets/css/button-custom.css">
-</head>
-<body>
-  <div id="app"></div>
-  <script>
-    const urlParams = new URLSearchParams(window.location.href);
-    window.$docsify = {
-      name: 'Docsify Share',
-      repo: 'coroo/docsify-share',
-      coverpage: false,
-      subMaxLevel: 1,
-      loadSidebar: true,
-      search: {
-        paths: 'auto',
-        placeholder: 'Search',
-        noData: 'No Results.',
-      },
-      search : [
-        '/',            // => /README.md
-      ],
-      share: {
+    <!-- docsify-themeable styles-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
+      title="light"
+    />
+    <link
+      rel="stylesheet alternative"
+      href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"
+      title="dark"
+    />
+    <link rel="stylesheet" href="./assets/css/main-custom.css" />
+    <link rel="stylesheet" href="./assets/css/button-custom.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      const urlParams = new URLSearchParams(window.location.href);
+      window.$docsify = {
+        name: "Docsify Share",
+        repo: "coroo/docsify-share",
+        coverpage: false,
+        subMaxLevel: 1,
+        loadSidebar: true,
+        search: {
+          paths: "auto",
+          placeholder: "Search",
+          noData: "No Results.",
+        },
+        search: [
+          "/", // => /README.md
+        ],
+        alias: {
+          "/.*/_sidebar.md": "/_sidebar.md",
+        },
+        share: {
           options: {
-            theme: urlParams.get('theme') ?? '',
-            color: urlParams.get('color') != null ? '#' + urlParams.get('color') : ''
+            theme: urlParams.get("theme") ?? "",
+            color:
+              urlParams.get("color") != null
+                ? "#" + urlParams.get("color")
+                : "",
           },
           reddit: true,
           linkedin: true,
@@ -43,27 +63,30 @@
           twitter: true,
           whatsapp: true,
           telegram: true,
-      },
-      footer: {
-        copy: '<span>Docsify-share &copy; 2020 - '+ new Date().getFullYear() +'</span>',
-        auth: 'by <a href="https://github.com/coroo">Kuncoro Wicaksono</a>',
-        pre: '<hr/>',
-        style: 'text-align: right;',
-      }, 
-      // 目录
-      toc: {
-        scope: '.markdown-section',
-        headings: 'h2, h3, h4, h5, h6',
-        title: '目录',
-      },
-    }
-  </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//unpkg.com/docsify-share@0.1.1/build/index.min.js"></script>
+        },
+        footer: {
+          copy:
+            "<span>Docsify-share &copy; 2020 - " +
+            new Date().getFullYear() +
+            "</span>",
+          auth: 'by <a href="https://github.com/coroo">Kuncoro Wicaksono</a>',
+          pre: "<hr/>",
+          style: "text-align: right;",
+        },
+        // 目录
+        toc: {
+          scope: ".markdown-section",
+          headings: "h2, h3, h4, h5, h6",
+          title: "目录",
+        },
+      };
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <script src="//unpkg.com/docsify-share@0.1.1/build/index.min.js"></script>
 
-  <!-- <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css"> -->
-  <!-- <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script> -->
-  <link rel="stylesheet" href="plugins/toc/toc.css">
-  <script src="plugins/toc/toc.js"></script>
-</body>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css"> -->
+    <!-- <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script> -->
+    <link rel="stylesheet" href="plugins/toc/toc.css" />
+    <script src="plugins/toc/toc.js"></script>
+  </body>
 </html>
