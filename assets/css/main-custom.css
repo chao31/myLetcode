@@ -129,6 +129,10 @@ img {
 }
 
 /* --------------- 我的添加 --------- */
+:root { 
+  --code-inline-background: #fff5f5;
+  --code-inline-color: #ff502c;
+}
 
 .sidebar-nav li>a:before, .sidebar-nav li>strong:before {
   display: none;
