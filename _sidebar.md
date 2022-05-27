@@ -1,6 +1,5 @@
 - 基础
-  - js 基础
-    [语句和声明](docs/语句和声明/index.md)
+  - [语句和声明](docs/语句和声明/index.md)
 - 单调栈
   - [商品折扣后的最终价格](docs/单调栈/finalPrices.1475.md)
   - [每日温度](docs/单调栈/dailyTemperatures.739.md)
@@ -14,6 +13,10 @@
   - [反转链表 2-中](docs/链表/反转链表2.md)
 - 字符串
   - [有效的括号](docs/字符串/有效的括号.md)
-  - [最长回文子串 - 中](docs/字符串/最长回文子串.md)
+- 字符串匹配
+  - [最长回文子串 - 中](docs/字符串匹配/最长回文子串.md)
+  - [最短回文串 - 难](docs/字符串匹配/最短回文串.md)
+  - [实现 indexOf 函数 - 难](docs/字符串匹配/实现indexOf.md)
+  
 - 不会
   - [部分排序](docs/不会/sub-sort-lcci.md)

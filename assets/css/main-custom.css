@@ -9,7 +9,7 @@
     --cover-heading-color                              : #777;
     --cover-blockquote-font-size                       : var(--font-size-l);
 
-    --cover-button-background--hover                   : #009688;
+    --cover-button-background--hover                   : var(--theme-color);
     --cover-button-color--hover                        : #FFF;
     --cover-button-primary-background--hover           : #026b61;
     --cover-button-padding                             : 1em 4rem;
@@ -45,7 +45,7 @@
     --code-theme-keyword                : #4CAF50;
     --code-font-size                    : 12px;
 
-    --heading-h1-color                  : #009688;
+    --heading-h1-color                  : var(--theme-color);
     /* --heading-h2-color                  : #c82829; */
     --heading-h3-color                  : #4CAF50;
     --heading-font-weight               : 600;
@@ -53,7 +53,7 @@
     --heading-h1-font-size              : 2em;
 
     /* Links */
-    --link-color                        : #009688;
+    --link-color                        : var(--theme-color);
     --link-color--hover                 : purple;
     --link-text-decoration              : underline;
 
@@ -128,12 +128,103 @@ img {
     cursor: pointer !important;
 }
 
+/* --------------- 我的个性化 --------- */
+:root { 
+  --theme-color: #769804;
+}
+
+.github-corner svg {
+  fill: #8cc34a;
+}
+
+/* 隐藏左边👈🏻navbar 的 展开 icon */
+.sidebar-nav li>a {
+  background-image: none!important;
+}
+
+.home-container {
+  margin-top: 30%;
+  font-size: 4rem;
+}
+
+/* 渐变绿 */
+.markdown-section h1,
+/* .page_toc .active,
+.page_toc .active:hover span,
+.page_toc ul a:hover span, */
+.markdown-section h3,
+.home-container,
+.app-name-link {
+  color: #f35626 !important;
+  background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a) !important;
+  -webkit-background-clip: text!important;
+  -webkit-text-fill-color: transparent!important;
+  -webkit-filter: hue-rotate(49deg)!important;
+}
+
+.github-corner svg {
+  position: relative;
+  fill: transparent;
+  background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a) !important;
+  -webkit-filter: hue-rotate(205deg);
+}
+
+/* 右上角 github 小 icon 渐变 */
+.github-corner::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 0px;
+  height: 0px;
+  border: 35px solid transparent;
+	border-left-color:#fff;
+	border-bottom-color:#fff;
+}
+
+/*  纽扣和分享的渐变色 */
+.fab.light-green.big-fab,
+.sidebar-toggle .sidebar-toggle-button {
+  color: #feab3a !important;
+  background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a) !important;
+  -webkit-filter: hue-rotate(205deg)
+}
+
 /* --------------- 我的添加 --------- */
 :root { 
   --code-inline-background: #fff5f5;
   --code-inline-color: #ff502c;
+  --selection-color: #3884468c;
+  
+  /* 修改 code 样式和关键字颜色 */
+  --code-theme-text:   #86a0f0;
+  --code-theme-selector: #bda7f3;
+  --code-theme-keyword: #b88080;
+  --code-theme-selection: #394a52;
+  --code-theme-tag: #86a676;
+  --code-block-padding: 2.75em 1.5em 1.5em 1.5em;
 }
 
 .sidebar-nav li>a:before, .sidebar-nav li>strong:before {
   display: none;
 }
+
+/* 左侧 sider 滚动条隐藏 */
+.sidebar::-webkit-scrollbar {
+  width: 0px!important;
+}
+
+/* code 块左上角 3 个圆标 */
+.markdown-section pre[data-lang]::before {
+  content: ' ';
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  top: 0.75em;
+  left: 0.75em;
+  background: #fc625d;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  border-radius: 50%;
+}
+
