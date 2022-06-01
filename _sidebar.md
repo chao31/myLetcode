@@ -1,5 +1,10 @@
 - 基础
   - [语句和声明](docs/语句和声明/index.md)
+  - [正则](docs/高频手写/正则.md)
+- 高频手写
+  - [防抖和节流](docs/高频手写/防抖和节流.md)
+  - [实现一个深拷贝](docs/高频手写/深拷贝.md)
+  - [实现一个 Event Emitter](docs/高频手写/实现一个Emitter.md)
 - 单调栈
   - [商品折扣后的最终价格](docs/单调栈/finalPrices.1475.md)
   - [每日温度](docs/单调栈/dailyTemperatures.739.md)
