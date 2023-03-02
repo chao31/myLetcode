@@ -235,6 +235,9 @@ img {
   --code-theme-selection: #394a52;
   --code-theme-tag: #86a676;
   --code-block-padding: 2.75em 1.5em 1.5em 1.5em;
+
+  /* 修改二级小文件夹图标旁边的字体padding */
+  --sidebar-nav-pagelink-padding: .23em;
 }
 
 .sidebar-nav li>a:before, .sidebar-nav li>strong:before {
@@ -270,6 +273,17 @@ img {
 
 .markdown-section strong {
   color:var(--theme-color)
+}
+
+/* 修复文件夹小图标不居中 */
+.sidebar-nav ul:not(.app-sub-sidebar)>.level-1::before {
+  top: 5px;
+  left: -20px;
+}
+
+/* 修复侧边栏level间距过大问题 */
+.sidebar-nav .level-1>p {
+  margin: 0;
 }
 
 
