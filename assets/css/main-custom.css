@@ -286,4 +286,8 @@ img {
   margin: 0;
 }
 
+/* 固定图片的高度，避免加载到图片后闪一下  */
+.markdown-section img {
+  height: 300px !important;
+}
 
